@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import "./style.css";
 
 
 const FoodILike = [
@@ -48,7 +48,12 @@ function App() {
   return(
     <div>
       {FoodILike.map(dish => (
-        <Food key={dish.id} name={dish.name} picture={dish.image} rating ={dish.rating}/>
+        <Food 
+        key={dish.id}
+        name={dish.name}
+        picture={dish.image}
+        rating ={dish.rating}
+        className="photo"/>
         ))}
     </div>
   );
