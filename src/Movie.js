@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Movie(id,year,title,summary,poster){
+function Movie({id,year,title,summary,poster}){
     return<h1>{title}</h1>
 } 
 

@@ -22,7 +22,9 @@ class App extends React.Component{
       <div>
         {isLoading 
           ? "Loading ..."
-          :movies.map(movie =>(
+          :movies.map(movie =>{
+            console.log(movie);
+            return(
                 <Movie 
                   key={movie.id}
                   id={movie.id}
@@ -31,8 +33,9 @@ class App extends React.Component{
                   summary={movie.summary}
                   poster={movie.medium_cover_image}
                 />
-              ))}
-    </div>
+              );
+            })}
+      </div>
     );
   }
 }
