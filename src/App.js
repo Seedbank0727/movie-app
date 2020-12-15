@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import Movie from "./Movie.js";
+import Movie from "./Movie";
 //import PropTypes from "prop-types";
 import "./style.css";
 
@@ -24,6 +24,7 @@ class App extends React.Component{
           ? "Loading ..."
           :movies.map(movie =>(
                 <Movie 
+                  key={movie.id}
                   id={movie.id}
                   year={movie.year}
                   title={movie.title}
