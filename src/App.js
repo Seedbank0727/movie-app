@@ -22,19 +22,20 @@ class App extends React.Component{
       <div>
         {isLoading 
           ? "Loading ..."
-          :movies.map(movie =>{
-            console.log(movie);
-            return(
-                <Movie 
-                  key={movie.id}
-                  id={movie.id}
-                  year={movie.year}
-                  title={movie.title}
-                  summary={movie.summary}
-                  poster={movie.medium_cover_image}
-                />
-              );
-            })}
+          :movies.map(movie =>
+            (
+              <Movie 
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+                rating={movie.rating}
+              />
+            )
+          )
+        }
       </div>
     );
   }
